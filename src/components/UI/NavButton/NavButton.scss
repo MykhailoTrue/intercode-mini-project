@@ -1,0 +1,25 @@
+.nav-button__button {
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  background-color: #000;
+  transition: background-color 300ms ease;
+  svg {
+    position: relative;
+    top: 1px;
+    color: white;
+  }
+}
+
+.nav-button__button:hover {
+  background-color: rgb(128, 128, 128);
+  cursor: pointer;
+}
+
+.nav-button__button.next svg {
+  left: 1px;
+}
+
+.nav-button__button.prev svg {
+  left: -1px;
+}
