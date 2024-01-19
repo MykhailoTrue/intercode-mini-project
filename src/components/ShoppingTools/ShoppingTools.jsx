@@ -9,50 +9,57 @@ import FindDealerIcon from "../../assets/images/shopping-tools-icons/find__deale
 
 const ShoppingTools = () => {
   return (
-    <div className={classes.shoppingTools}>
-      <div className={classes.shoppingTools__container}>
-        <div className={classes.shoppingTool}>
-          <Link to="">
-            <div className={classes.overlayText}>
-              <div className={classes.shoppingTool__icon}>
-                <img src={buildAndPriceIcon} alt="" />
+    <>
+      <div className={classes.shoppingTitle}>
+        <h2>Shopping Tools</h2>
+      </div>
+      <div className={classes.shoppingTools}>
+        <div className={classes.shoppingTools__container}>
+          <div className={classes.shoppingTool}>
+            <Link to="">
+              <div className={classes.overlayText}>
+                <div className={classes.shoppingTool__icon}>
+                  <img src={buildAndPriceIcon} alt="" />
+                </div>
+                <div className={classes.shoppingTool__text}>Build & Price</div>
               </div>
-              <div className={classes.shoppingTool__text}>Build & Price</div>
-            </div>
-          </Link>
-        </div>
-        <div className={classes.shoppingTool}>
-          <Link to="">
-            <div className={classes.overlayText}>
-              <div className={classes.shoppingTool__icon}>
-                <img src={SearchInventoryIcon} alt="" />
+            </Link>
+          </div>
+          <div className={classes.shoppingTool}>
+            <Link to="">
+              <div className={classes.overlayText}>
+                <div className={classes.shoppingTool__icon}>
+                  <img src={SearchInventoryIcon} alt="" />
+                </div>
+                <div className={classes.shoppingTool__text}>
+                  Search Inventory
+                </div>
               </div>
-              <div className={classes.shoppingTool__text}>Search Inventory</div>
-            </div>
-          </Link>
-        </div>
-        <div className={classes.shoppingTool}>
-          <Link to="">
-            <div className={classes.overlayText}>
-              <div className={classes.shoppingTool__icon}>
-                <img src={LocalSpecialsIcon} alt="" />
+            </Link>
+          </div>
+          <div className={classes.shoppingTool}>
+            <Link to="">
+              <div className={classes.overlayText}>
+                <div className={classes.shoppingTool__icon}>
+                  <img src={LocalSpecialsIcon} alt="" />
+                </div>
+                <div className={classes.shoppingTool__text}>Local Specials</div>
               </div>
-              <div className={classes.shoppingTool__text}>Local Specials</div>
-            </div>
-          </Link>
-        </div>
-        <div className={classes.shoppingTool}>
-          <Link to="">
-            <div className={classes.overlayText}>
-              <div className={classes.shoppingTool__icon}>
-                <img src={FindDealerIcon} alt="" />
+            </Link>
+          </div>
+          <div className={classes.shoppingTool}>
+            <Link to="">
+              <div className={classes.overlayText}>
+                <div className={classes.shoppingTool__icon}>
+                  <img src={FindDealerIcon} alt="" />
+                </div>
+                <div className={classes.shoppingTool__text}>Find A Dealer</div>
               </div>
-              <div className={classes.shoppingTool__text}>Find A Dealer</div>
-            </div>
-          </Link>
+            </Link>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

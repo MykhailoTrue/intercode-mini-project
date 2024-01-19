@@ -1,4 +1,16 @@
 .shopping {
+  &Title {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h2 {
+      color: #000;
+      font-weight: 600;
+      font-size: 28px;
+    }
+  }
   &Tools {
     padding: 0 36px;
     margin: 36px 26px;
