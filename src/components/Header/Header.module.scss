@@ -81,6 +81,11 @@
 }
 
 @media (max-width: 767px) {
+  .header {
+    &__container {
+      margin: 0 18px 0 5px;
+    }
+  }
   .menu {
     &__icon {
       z-index: 5;
