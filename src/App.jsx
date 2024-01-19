@@ -13,6 +13,7 @@ import secondCar3 from "./assets/images/slider2/3.jpg";
 import secondCar4 from "./assets/images/slider2/4.jpg";
 import ShoppingTools from "./components/ShoppingTools/ShoppingTools";
 import CtaButton from "./components/UI/CtaButton/CtaButton";
+import Herro from "./components/Herro/Herro";
 
 const SLIDER1_IMAGES = [firstCar1, firstCar2, firstCar3];
 const SLIDER2_IMAGES = [secondCar1, secondCar2, secondCar3, secondCar4];
@@ -24,9 +25,7 @@ function App() {
       <div style={{ marginTop: "67px" }}></div>
       <Slider imgUrls={SLIDER1_IMAGES}></Slider>
       <ShoppingTools></ShoppingTools>
-      <CtaButton style={{ backgroundColor: "tomato" }}>
-        Hellosdfafdsafsdasfsdafasdfdsafdsa
-      </CtaButton>
+      <Herro></Herro>
       <Slider imgUrls={SLIDER2_IMAGES}></Slider>
       <Routes></Routes>
     </BrowserRouter>

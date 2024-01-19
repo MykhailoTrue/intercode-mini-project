@@ -1,24 +1,27 @@
 .button {
   &._active {
     opacity: 0.8;
+    cursor: pointer;
   }
-  display: inline-flex;
-  width: min-content;
-  height: 40px;
+
+  height: 32px;
   border-radius: 50px;
   &Container {
-    padding: 12px 40px;
+    padding: 10px 20px;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 16px;
+    font-size: 12px;
     span {
+      font-weight: 500;
+      display: block;
       position: relative;
       transition: left 0.3s ease-in;
       left: 0;
     }
     img {
+      height: 8px;
       left: 0;
       transition: left 0.3s ease-in;
       visibility: hidden;

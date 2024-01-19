@@ -3,12 +3,11 @@ import classes from "./CtaButton.module.scss";
 import { Link } from "react-router-dom";
 import buttonArrow from "../../../assets/images/button-arrow.svg";
 
-const CtaButton = ({ children, link, padding, ...props }) => {
+const CtaButton = ({ children, link, ...props }) => {
   const [isHovered, setIsHovered] = useState(false);
   const content = (
     <div
       className={classes.button + (isHovered ? ` ${classes._active}` : "")}
-      style={{ padding: padding }}
       {...props}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
