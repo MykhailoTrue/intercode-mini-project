@@ -12,8 +12,8 @@ import secondCar2 from "./assets/images/slider2/2.jpg";
 import secondCar3 from "./assets/images/slider2/3.jpg";
 import secondCar4 from "./assets/images/slider2/4.jpg";
 import ShoppingTools from "./components/ShoppingTools/ShoppingTools";
-import CtaButton from "./components/UI/CtaButton/CtaButton";
 import Herro from "./components/Herro/Herro";
+import Footer from "./components/Footer/Footer";
 
 const SLIDER1_IMAGES = [firstCar1, firstCar2, firstCar3];
 const SLIDER2_IMAGES = [secondCar1, secondCar2, secondCar3, secondCar4];
@@ -23,10 +23,11 @@ function App() {
     <BrowserRouter>
       <Header></Header>
       <div style={{ marginTop: "67px" }}></div>
-      <Slider imgUrls={SLIDER1_IMAGES}></Slider>
+      <Slider imgUrls={SLIDER2_IMAGES}></Slider>
       <ShoppingTools></ShoppingTools>
       <Herro></Herro>
-      <Slider imgUrls={SLIDER2_IMAGES}></Slider>
+      <Slider imgUrls={SLIDER1_IMAGES}></Slider>
+      <Footer></Footer>
       <Routes></Routes>
     </BrowserRouter>
   );

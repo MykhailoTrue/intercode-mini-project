@@ -1,0 +1,82 @@
+.collapsible {
+  &Container {
+    h2 {
+      font-weight: 600;
+      font-size: 16px;
+    }
+    .collapsibleContent {
+      &Container {
+        padding: 0 0 40px 0;
+        li {
+          font-size: 14px;
+          line-height: 22px;
+          font-weight: 400;
+          padding: 0 26px 0 0;
+          margin: 10px 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .collapsible {
+    &Container {
+      border-bottom: 1px solid #d8d8d8;
+      padding-top: 7px;
+      h2 {
+        line-height: 42px;
+        position: relative;
+      }
+      h2::before {
+        content: "";
+        width: 2px;
+        height: 16px;
+        background-color: #000;
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 14px;
+        transform: rotate(0deg);
+        transition: transform 0.5s ease;
+      }
+      h2::after {
+        content: "";
+        width: 16px;
+        height: 2px;
+        background-color: #000;
+        display: block;
+        position: absolute;
+        right: 13px;
+        top: 21px;
+      }
+      .collapsibleContent {
+        max-height: 0px;
+        opacity: 0;
+        overflow: hidden;
+        transition: all 0.5s ease;
+        &Container {
+          padding: 0 0 40px 0;
+          li {
+            font-size: 14px;
+            line-height: 22px;
+            font-weight: 400;
+            padding: 0 26px 0 0;
+            margin: 10px 0;
+          }
+        }
+      }
+    }
+
+    &Container._active {
+      h2:before {
+        transform: rotate(90deg);
+      }
+      .collapsibleContent {
+        max-height: 100%;
+        opacity: 1;
+        overflow: hidden;
+      }
+    }
+  }
+}
