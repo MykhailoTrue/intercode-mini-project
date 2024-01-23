@@ -25,18 +25,18 @@ const Header = () => {
         <div className={classes.header__menu + " " + classes.menu}>
           <nav className={menuBodyClasses.join(" ")}>
             <ul className={classes.menu__list}>
-              <li>
-                <Link to="/" className={classes.menu__link}>
+              <li onClick={handleBurgerClick}>
+                <Link to="/vehicles" className={classes.menu__link}>
                   Vehicles
                 </Link>
               </li>
-              <li>
+              <li onClick={handleBurgerClick}>
                 <Link to="/" className={classes.menu__link}>
                   Main
                 </Link>
               </li>
-              <li>
-                <Link to="/" className={classes.menu__link}>
+              <li onClick={handleBurgerClick}>
+                <Link to="/about" className={classes.menu__link}>
                   About
                 </Link>
               </li>
