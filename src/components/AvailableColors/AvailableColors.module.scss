@@ -1,0 +1,50 @@
+.availableColors {
+  padding: 20px 0;
+  &Container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 30px 25px 34px 40px;
+    background-color: #fff;
+    .colorName {
+      padding-bottom: 10px;
+    }
+    .colorsContainer {
+      display: flex;
+      flex-wrap: wrap;
+      .colorCard {
+        margin: 0 20px 20px 0;
+
+        &Container {
+          background-size: auto 100%;
+          border-radius: 4px;
+          box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.15);
+          display: inline-block;
+          height: 80px;
+          position: relative;
+          transition: transform 0.1s ease-in;
+          width: 80px;
+
+          &:hover {
+            cursor: pointer;
+            transform: scale(1.03);
+          }
+
+          .colorSelectedIconContainer {
+            display: none;
+            width: 24px;
+            position: absolute;
+            top: 28px;
+            left: 28px;
+          }
+        }
+
+        &Container._active {
+          border: 3px solid #e10a1d;
+          .colorSelectedIconContainer {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
