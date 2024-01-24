@@ -34,10 +34,12 @@ const VehicleConfigurator = () => {
   ) : (
     <div>
       {/* <Link to={"/vehicles/1"}>Vehicle 2</Link> */}
-      <div className={classes.vehicle}>
-        <div className={classes.vehicleWrapper}>
-          <VehicleBuild vehicle={vehicle}></VehicleBuild>
-          <div className={classes.vehicleOptions}>
+      <div className={classes.configurator}>
+        <div className={classes.configuratorContainer}>
+          <div className={classes.configuratorBuildContainer}>
+            <VehicleBuild vehicle={vehicle}></VehicleBuild>
+          </div>
+          <div className={classes.configuratorOptionsContainer}>
             <AvailableColors
               vehicle={vehicle}
               setVehicle={setVehicle}

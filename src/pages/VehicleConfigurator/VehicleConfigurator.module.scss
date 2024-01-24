@@ -1,0 +1,10 @@
+.configurator {
+  &Container {
+    .configuratorBuildContainer {
+    }
+    .configuratorOptionsContainer {
+      background-color: #f6f6f6;
+      padding: 20px 0;
+    }
+  }
+}
