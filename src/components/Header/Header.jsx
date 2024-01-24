@@ -10,6 +10,9 @@ const Header = () => {
   if (isBurgerOpen) {
     menuBodyClasses.push(classes._active);
     menuIconClasses.push(classes._active);
+    document.body.classList.add(classes.bodyActive);
+  } else {
+    document.body.classList.remove(classes.bodyActive);
   }
 
   function handleBurgerClick() {
@@ -25,17 +28,17 @@ const Header = () => {
         <div className={classes.header__menu + " " + classes.menu}>
           <nav className={menuBodyClasses.join(" ")}>
             <ul className={classes.menu__list}>
-              <li onClick={handleBurgerClick}>
+              <li onClick={(e) => setIsBurgerOpen(false)}>
                 <Link to="/vehicles" className={classes.menu__link}>
                   Vehicles
                 </Link>
               </li>
-              <li onClick={handleBurgerClick}>
+              <li onClick={(e) => setIsBurgerOpen(false)}>
                 <Link to="/" className={classes.menu__link}>
                   Main
                 </Link>
               </li>
-              <li onClick={handleBurgerClick}>
+              <li onClick={(e) => setIsBurgerOpen(false)}>
                 <Link to="/about" className={classes.menu__link}>
                   About
                 </Link>
