@@ -141,6 +141,23 @@ export function getVehicleById(id) {
   return vehicles.find((c) => c.id === id);
 }
 
+export function getFullVehicleById(id) {
+  return vehicles
+    .map((vehicle) => {
+      const mappedVehicle = { ...vehicle };
+      mappedVehicle.model = models.find((model) => model.id === vehicle.model);
+      mappedVehicle.color = colors.find((color) => color.id === vehicle.color);
+      mappedVehicle.engine = engines.find(
+        (engine) => engine.id === vehicle.engine
+      );
+      mappedVehicle.availableModels = vehicle.availableModels.map((modelId) =>
+        models.find((model) => model.id === modelId)
+      );
+      return mappedVehicle;
+    })
+    .find((v) => v.id === id);
+}
+
 // models
 export function getAllModels() {
   return models;
