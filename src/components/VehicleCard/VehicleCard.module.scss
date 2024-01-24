@@ -9,6 +9,11 @@
   font-size: 10px;
   &:hover {
     cursor: pointer;
+    background: #fff;
+    border: 1px solid #d8d8d8;
+    box-shadow: 0 3pc 2pc -2pc rgba(0, 0, 0, 0.16),
+      0 4px 1pc 0 rgba(0, 0, 0, 0.1);
+    opacity: 1;
   }
   .imageContainer {
     margin: 0 0 4px 0;
