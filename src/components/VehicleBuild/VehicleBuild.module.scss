@@ -1,0 +1,125 @@
+.vehicleBuild {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+  &Title {
+    flex-basis: 20%;
+    display: flex;
+    justify-content: flex-end;
+    &Container {
+      padding-top: 40px;
+      h5 {
+        font-size: 16px;
+        font-weight: 600;
+        position: relative;
+        padding-bottom: 20px;
+        &:after {
+          background: #e10a1d;
+          content: "";
+          display: block;
+          height: 1px;
+          position: absolute;
+          top: 20px;
+          width: 30px;
+        }
+      }
+      &Content {
+        font-size: 24px;
+        font-weight: 500;
+
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+      }
+    }
+  }
+  &Image {
+    flex-basis: 60%;
+    img {
+      width: 100%;
+    }
+  }
+  &Price {
+    flex-basis: 20%;
+    display: flex;
+    justify-content: flex-start;
+    &Container {
+      padding-top: 40px;
+      display: flex;
+      flex-direction: column;
+      h5 {
+        font-size: 16px;
+        font-weight: 600;
+        padding-bottom: 10px;
+      }
+      &Content {
+        font-size: 24px;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .vehicleBuild {
+    flex-direction: column;
+    &Title {
+      flex-basis: 100%;
+      justify-content: center;
+      &Container {
+        padding-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h5 {
+          font-size: 16px;
+          font-weight: 600;
+          position: relative;
+          padding-bottom: 20px;
+          &:after {
+            background: #e10a1d;
+            content: "";
+            display: block;
+            height: 1px;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            left: 20px;
+            width: auto;
+          }
+        }
+        &Content {
+          font-size: 32px;
+          font-weight: 500;
+
+          flex-direction: row;
+          & > * {
+            padding-right: 10px;
+          }
+        }
+      }
+    }
+    &Image {
+      flex-basis: 100%;
+    }
+    &Price {
+      flex-basis: 100%;
+      justify-content: center;
+      &Container {
+        padding-top: 20px;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        h5 {
+          font-size: 14px;
+          font-weight: 400;
+          padding-top: 10px;
+        }
+        &Content {
+          font-size: 32px;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}
