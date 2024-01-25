@@ -1,0 +1,23 @@
+.availableEngines {
+  &Container {
+    display: flex;
+    justify-content: center;
+    .engineWrapper {
+      width: 310px;
+      flex: 0 0 310px;
+      margin-right: 20px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .availableEngines {
+    &Container {
+      flex-direction: column;
+      align-items: center;
+      .engineWrapper {
+        margin: 0 0 20px 0;
+      }
+    }
+  }
+}

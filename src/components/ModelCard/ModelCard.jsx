@@ -21,6 +21,10 @@ import Loader from "../UI/Loader/Loader";
  */
 const ModelCard = ({ model, isSelected, index }) => {
   const [imageUrl, setImageUrl] = useState("");
+  const modelCardClasses = [classes.modelCard];
+  if (isSelected) {
+    modelCardClasses.push(classes._activeCard);
+  }
   const [fetchImageUrl, isImageUrlLoading, error] = useFetching((modelId) => {
     const imageUrl = getModelDefaultImage(modelId);
     setImageUrl(imageUrl);
@@ -33,7 +37,7 @@ const ModelCard = ({ model, isSelected, index }) => {
   return isImageUrlLoading ? (
     <Loader></Loader>
   ) : (
-    <div className={classes.modelCard}>
+    <div className={modelCardClasses.join(" ")}>
       <div className={classes.modelCardIndex}>
         {index.order}/{index.totalCount}
       </div>

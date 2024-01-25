@@ -33,9 +33,10 @@
           }
           &Wrapper {
             display: flex;
-            justify-content: space-between;
+            justify-content: flex-start;
             flex-wrap: wrap;
             row-gap: 20px;
+            column-gap: 20px;
           }
         }
       }

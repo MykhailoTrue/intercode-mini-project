@@ -56,7 +56,6 @@ const VehicleConfigurator = () => {
           </div>
         </div>
       </div>
-      {vehicle?.id}
     </div>
   );
 };
