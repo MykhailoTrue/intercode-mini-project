@@ -23,7 +23,7 @@ const Vehicles = () => {
               </div>
               <div className={classes.vehicleCardsContentWrapper}>
                 {vehicles.map((v) => (
-                  <VehicleCard vehicle={v}></VehicleCard>
+                  <VehicleCard key={v.id} vehicle={v}></VehicleCard>
                 ))}
               </div>
             </div>

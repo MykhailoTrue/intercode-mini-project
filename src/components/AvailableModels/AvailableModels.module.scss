@@ -1,5 +1,7 @@
 .availableModels {
   padding: 20px 0;
+  width: 90%;
+  margin: 0 auto;
   &Container {
     display: flex;
     flex-wrap: wrap;
@@ -8,6 +10,16 @@
     justify-content: flex-start;
     .modelCardWrapper {
       margin-right: 20px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .availableModels {
+    &Container {
+      flex-direction: column;
+      align-items: center;
+      margin-left: 0;
     }
   }
 }

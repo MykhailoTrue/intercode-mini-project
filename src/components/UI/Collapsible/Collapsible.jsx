@@ -27,7 +27,7 @@ const Collapsible = ({ label, content }) => {
         <h2 onClick={collapseContent}>{label}</h2>
         <div className={classes.collapsibleContent}>
           <ul className={classes.collapsibleContentContainer}>
-            {content && content.map((v) => <li>{v}</li>)}
+            {content && content.map((v, index) => <li key={index}>{v}</li>)}
           </ul>
         </div>
       </div>
