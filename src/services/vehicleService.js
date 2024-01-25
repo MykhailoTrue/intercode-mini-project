@@ -67,7 +67,7 @@ const models = [
   {
     id: 4,
     name: "Limited",
-    price: 46_7000,
+    price: 46_700,
     estimatedMilesPerGalon: "16/19",
 
     vehicleId: 1,
@@ -165,6 +165,13 @@ export function getAllModels() {
 
 export function getModelById(id) {
   return models.find((m) => m.id === id);
+}
+
+export function getModelDefaultImage(modelId) {
+  const model = getModelById(modelId);
+  const vehicleId = model?.vehicleId;
+  const colorId = getVehicleById(vehicleId)?.color;
+  return `/Vehicles/${vehicleId}-${model?.id}-${colorId}.png`;
 }
 
 export function getAllModelsByVehicleId(id) {
