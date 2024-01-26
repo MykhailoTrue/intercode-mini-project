@@ -1,0 +1,102 @@
+.stepper {
+  &Container {
+    .stepperNav {
+      &Container {
+        display: flex;
+        height: 60px;
+        background-color: #252525;
+        justify-content: center;
+        align-items: center;
+        .stepNav {
+          position: relative;
+          height: 100%;
+          width: 200px;
+          background-color: #252525;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+          align-items: center;
+          .navIndicator {
+            background-color: #e10a1d;
+            display: block;
+            filter: alpha(opacity=50);
+            height: 3px;
+            left: 50%;
+            opacity: 0.5;
+            position: absolute;
+            right: 50%;
+            top: 0;
+            transition: left 0.33s ease, right 0.33s ease, opacity 0.25s ease;
+            z-index: 1;
+          }
+          .stepIcon {
+            svg {
+              fill: #fff;
+            }
+          }
+
+          .stepTitle {
+            color: #fff;
+            margin: 5px 0 8px 0;
+            letter-spacing: 2px;
+          }
+          &::before {
+            background-color: #444;
+            content: "";
+            display: block;
+            height: 60px;
+            position: absolute;
+            top: 0;
+            width: 1px;
+            left: 0;
+          }
+          &:last-child:after {
+            background-color: #444;
+            content: "";
+            display: block;
+            height: 60px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 1px;
+          }
+          &:hover {
+            cursor: pointer;
+          }
+        }
+
+        .stepNav.activeStep {
+          background-color: #f6f6f6;
+          .navIndicator {
+            left: 0;
+            opacity: 1;
+            right: 0;
+          }
+          .stepIcon {
+            svg {
+              fill: #252525;
+            }
+          }
+          .stepTitle {
+            font-weight: 500;
+            color: #252525;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .stepper {
+    &Container {
+      .stepperNav {
+        &Container {
+          .stepNav {
+            width: 30%;
+          }
+        }
+      }
+    }
+  }
+}

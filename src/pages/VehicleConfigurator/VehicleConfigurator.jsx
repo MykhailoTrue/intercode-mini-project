@@ -5,10 +5,8 @@ import { getFullVehicleById } from "../../services/vehicleService";
 import { useNavigate } from "react-router-dom";
 import Loader from "../../components/UI/Loader/Loader";
 import { useFetching } from "../../hooks/useFetching";
-import AvailableModels from "../../components/AvailableModels/AvailableModels";
-import AvailableColors from "../../components/AvailableColors/AvailableColors";
-import AvailableEngines from "../../components/AvailableEngines/AvailableEngines";
 import VehicleBuild from "../../components/VehicleBuild/VehicleBuild";
+import Stepper from "../../components/Stepper/Stepper";
 
 const VehicleConfigurator = () => {
   const navigate = useNavigate();
@@ -40,19 +38,11 @@ const VehicleConfigurator = () => {
             <VehicleBuild vehicle={vehicle}></VehicleBuild>
           </div>
           <div className={classes.configuratorOptionsContainer}>
-            <AvailableColors
+            <Stepper
               vehicle={vehicle}
               setVehicle={setVehicle}
-            ></AvailableColors>
-            <AvailableModels
               vehicleId={vehicleId}
-              vehicle={vehicle}
-              setVehicle={setVehicle}
-            ></AvailableModels>
-            <AvailableEngines
-              vehicle={vehicle}
-              setVehicle={setVehicle}
-            ></AvailableEngines>
+            ></Stepper>
           </div>
         </div>
       </div>

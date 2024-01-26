@@ -16,6 +16,8 @@
 
 @media (max-width: 768px) {
   .availableModels {
+    width: 100%;
+    margin: 0;
     &Container {
       flex-direction: column;
       align-items: center;
