@@ -19,7 +19,7 @@ const VehicleConfigurator = () => {
     if (vehicle) {
       setVehicle(vehicle);
     } else {
-      navigate("/not-found");
+      navigate("/car-not-found");
     }
   });
 

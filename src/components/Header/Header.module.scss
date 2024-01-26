@@ -38,7 +38,14 @@ body.bodyActive {
     display: flex;
   }
   &__list li {
-    margin: 0 32px;
+    margin: 0 22px;
+    padding: 10px 20px;
+    border: 1px solid transparent;
+    &:hover {
+      cursor: pointer;
+      border: 1px solid #000;
+      border-radius: 20px;
+    }
   }
   &__list li:last-child {
     margin: 0 0 0 32px;
@@ -159,13 +166,20 @@ body.bodyActive {
 
     &__list li {
       margin: 0;
+      border: 1px solid transparent;
       border-bottom: 1px solid rgb(232, 232, 232);
+
       color: rgb(0, 0, 0);
       display: block;
       padding: 20.4px 0px;
       position: relative;
       text-align: left;
       width: 100%;
+      &:hover {
+        border: 1px solid transparent;
+        border-bottom: 1px solid rgb(232, 232, 232);
+        border-radius: 0;
+      }
     }
     &__list li:last-child {
       margin: 0;

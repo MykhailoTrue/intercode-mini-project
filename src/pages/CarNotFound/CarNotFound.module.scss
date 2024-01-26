@@ -1,0 +1,49 @@
+.notFound {
+  &Container {
+    padding-bottom: 56px;
+    .notFoundToHome {
+      padding: 24px 0 24px 24px;
+      &Link {
+        color: #e10a1d;
+        font-size: 12px;
+        font-weight: 700;
+        position: relative;
+        margin-left: 32px;
+        &::before {
+          background-image: url("../../assets/images/svg/prevBackgroundImage.svg");
+          background-position: 0 0;
+          background-repeat: no-repeat;
+          background-size: contain;
+          content: "";
+          display: inline-block;
+          height: 10px;
+          left: -9pt;
+          position: absolute;
+          top: 3px;
+          width: 10px;
+        }
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    .notFoundErrorPage {
+      text-align: center;
+
+      &StatusCode {
+        font-size: 12px;
+        font-weight: 600px;
+      }
+      h1 {
+        font-size: 44px;
+        line-height: 56px;
+        font-weight: 700;
+        margin: 16px auto;
+      }
+      p {
+        font-weight: 200;
+        font-size: 14px;
+      }
+    }
+  }
+}
